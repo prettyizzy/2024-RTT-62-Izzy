@@ -104,7 +104,7 @@ public class Homework303_2_1 {
 
     public static void myCafe() {
         // Create a constant called SALES_TAX and add sales tax to the subtotal to obtain the totalSale amount.
-        double SALES_TAX = 0.06;
+        final double SALES_TAX = 0.06;
 
         // Write a program where you create three variables that represent products at a cafe.
         // Assign prices to each product.
