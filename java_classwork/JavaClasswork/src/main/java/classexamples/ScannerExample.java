@@ -1,4 +1,4 @@
-package org.example;
+package classexamples;
 import java.util.Scanner;
 
 public class ScannerExample {
