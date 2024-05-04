@@ -18,23 +18,24 @@ public class Problem5 {
         int grade = scanner.nextInt();
         scanner.close();
 
-        if (grade >= 90) {
+        if (0 > grade || grade > 100) {
+            System.out.println("Score out of range");
+        }
+        else if (grade >= 90) {
             System.out.println("You have an A!");
         }
-        else if ((89 <= grade) || (grade >= 80)) {
+        else if (grade >= 80) {
             System.out.println("You have an B!");
         }
-        else if ((79 <= grade) || (grade >= 70)) {
+        else if (grade >= 70) {
             System.out.println("You have an C!");
         }
-        else if ((69 <= grade) || (grade >= 60)) {
+        else if (grade >= 60) {
             System.out.println("You have an D!");
         }
-        else if ((60 > grade) && (grade <= 0)) {
-            System.out.println("You have an E!");
+        else if (grade < 60) {
+            System.out.println("You have an F!");
         }
-        else {
-            System.out.println("Out of bounds");
-        }
+
     }
 }
