@@ -1,7 +1,7 @@
 package guided_labs.glab303_11_4;
 import java.util.*;
 public class LinkedListExample {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         /* Linked List Declaration */
         LinkedList<String> linkedlist = new LinkedList<String>();

@@ -1,4 +1,4 @@
-package guided_labs.glab303_10_4_incomplete;
+package guided_labs.glab303_10_4;
 
 public interface Movable {// An interface defines a list of public abstract methods to be implemented by the subclasses
     void moveUp();    // "public" and "abstract" by default

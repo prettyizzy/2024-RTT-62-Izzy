@@ -1,4 +1,4 @@
-package guided_labs.glab303_10_4_incomplete;
+package guided_labs.glab303_10_4;
 
 public class Circle extends Shape implements Movable  {
     protected double radius;
