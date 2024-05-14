@@ -7,9 +7,9 @@ public class ArithmeticException {
             int n = 5;
             // code that generates exception
             int divideByZero = n / d;
-        } catch (ArithmeticException e) {
-            System.out.println("ArithmeticException occur  => " + e.getMessage());
-            e.printStackTrace();
+        //} catch (ArithmeticException e) {
+         //   System.out.println("ArithmeticException occur  => " + e.getMessage());
+        //    e.printStackTrace();
         } finally {
             System.out.println("This is the finally block");
         }
