@@ -5,6 +5,7 @@ public class Product {
     private double price;
     private String name;
     private boolean beverage;
+    private int quantityAvailable;
 
     // constructor with no args - by default. this is included wiht teh java langauges
     public Product() {
@@ -17,6 +18,7 @@ public class Product {
         this.price = price;
         this.name = name;
         this.beverage = beverage;
+        this.quantityAvailable = quantityAvailable;
     }
 
     public double getPrice() {
@@ -35,7 +37,17 @@ public class Product {
         this.name = name;
     }
 
-    public void setBeverage(boolean beverage) {
-        this.beverage = beverage;
+    public boolean setBeverage(boolean beverage) {
+        return beverage;
+    }
+
+    public void isBeverage() { this.beverage = beverage; }
+
+    public int getQuantityAvailable() {
+        return quantityAvailable;
+    }
+
+    public void setQuantityAvailable(int quantity) {
+        this.quantityAvailable = quantityAvailable;
     }
 }
