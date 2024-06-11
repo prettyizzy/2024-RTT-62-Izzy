@@ -87,7 +87,8 @@ ORDER BY margin DESC;
 -- I want to see the top 5 customers in each state based on margin 
 SELECT product_name, buy_price, msrp, (msrp - buy_price) AS margin
 FROM classic_models.products
-ORDER BY margin DESC;
+ORDER BY margin DESC
+LIMIT 5;
 
 -- Question 3
 -- I want to see the top 5 salesmen in the company based on the total amount sold
@@ -125,16 +126,30 @@ GROUP BY year(order_date);
 
 -- Question 7
 -- I want to see the top 5 products based on quantity sold across all orders
+SELECT product_name, sum(quantity_ordered) as total_ordered
+FROM classic_models.orderdetails, classic_models.products
+WHERE product_id = products.id
+	  AND orderdetails.order_id not in (select id from classic_models.orders where status = 'Cancelled')
+GROUP BY product_id
+LIMIT 5;
 
 -- question 7.5
 -- how many times has each product appeared in an order reguardless of how many were purchased.
+select p.product_name, count(p.id) as count
+from classic_models.orderdetails od, classic_models.products p
+where od.product_id = p.id
+group by p.id
+order by count desc;
 
 -- question 7.6
 -- how many products would be out of stock baed on the amount sold acrosss tiem.  -- not sure if the data will spoort this .. basically 
 -- looking for any product where the sum of the quantity sold is greater than the quantity in stock
+select product_id, p.product_name, sum(quantity_ordered) as otal_ordered, p.quantity_in_stock - sum(quantity_ordered) as overordered
+from orderdetails
 
 -- question 7.9
 -- I want to see the distinct order status ordered alphabetically
+select distinct o.name as office_name status from orders order by status;
 
 -- Question 8
 -- I want to see the office name and the distinct product lines that have been sold in that office.  This will require joining almost all of the tables.  
