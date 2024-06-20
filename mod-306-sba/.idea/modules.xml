@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/mod-306-sba.iml" filepath="$PROJECT_DIR$/.idea/mod-306-sba.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AD-SBA-CoreJava-Hibernate-JUnit-Learner-learner_version/sba-core-java-hibernate-junit.iml" filepath="$PROJECT_DIR$/AD-SBA-CoreJava-Hibernate-JUnit-Learner-learner_version/sba-core-java-hibernate-junit.iml" />
+    </modules>
+  </component>
+</project>
