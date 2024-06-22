@@ -97,11 +97,13 @@ public class StudentService{
             session.getTransaction().begin();
             session.merge(studentToRegister);
             session.getTransaction().commit();
+            System.out.printf("successfully register %s to %s%n", getStudentByEmail(email).getName(), courseService.getCourseById(courseId).getName());
         } catch(Exception e) {
             System.out.println("Sorry, you already registered for this course!");
         }
         finally {
             session.close();
+
         }
 
 

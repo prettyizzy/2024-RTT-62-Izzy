@@ -8,7 +8,6 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 //import sba.sms.dao.CourseI;
-import sba.sms.dao.CourseI;
 import sba.sms.models.Course;
 import sba.sms.utils.HibernateUtil;
 
@@ -27,7 +26,7 @@ import java.util.List;
  * CourseI interface, overrides all abstract service methods and
  * provides implementation for each method.
  */
-public class CourseService implements CourseI {
+public class CourseService {
     public void createCourse(Course course) {
         Session session = HibernateUtil.getSessionFactory().openSession();
 
